@@ -44,7 +44,7 @@ export default ({
       return;
     }
     if (xhr.status >= 200 && xhr.status < 400) {
-      success(xhr.response);
+      success(xhr);
     } else {
       const { statusText, status } = xhr;
       fail({ statusText: status ? statusText : 'timeout', status });
